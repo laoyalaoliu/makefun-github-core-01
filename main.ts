@@ -78,6 +78,8 @@ async function waitForDone(): Promise<void> {
 
 /** Bound the port, register it, then wait for the env: the whole life of the process. */
 async function main(): Promise<void> {
+  // The forge built for github-core-clone-01: git smart HTTP, REST v3, GraphQL and MCP in app.ts.
+  process.stdout.write('[entry] github-core forge starting\n');
   const server = createApp();
   await new Promise<void>((resolve, reject) => {
     server.once('error', reject);
